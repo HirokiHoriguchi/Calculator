@@ -69,8 +69,7 @@ class MainActivity : AppCompatActivity() {
     fun numBottunAction(num: Int) {
         if (!isCalculateButtonPushed) {
             var display_text = display.text.toString()
-            if (display_text.length < 9
-                && display_text.length == 1
+            if (display_text.length == 1
                 && display_text.substring(0, 1) == "0") {
                 display.text = ""
             } else if (display_text.length == 9) {
@@ -80,8 +79,7 @@ class MainActivity : AppCompatActivity() {
             displayNumber = (display_text + num.toString()).toInt()
         } else {
             var display_text = display.text.toString()
-            if (display_text.length < 9
-                && display_text.length == 1
+            if (display_text.length == 1
                 && display_text.substring(0, 1) == "0") {
                 display.text = ""
             } else if (display_text.length == 9) {
