@@ -5,7 +5,10 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="colorBlack">#000000</color>
     <color name="numberColor">#FFFFFF</color>
-    <color name="colorGrey">#cccccc</color>a
-    <color name="colorOrenge">#F7AD2E</color>
+    <color name="numberPushed">#f5f5f5</color>
+    <color name="colorLightGrey">#cccccc</color>
+    <color name="colorGrey">#808080</color>
+    <color name="colorOrange">#F7AD2E</color>
     <color name="colorDarkGrey">#2b2b2b</color>
+    <color name="colorDarkOrange">#ca6500</color>
 </resources>
