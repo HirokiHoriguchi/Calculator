@@ -19,6 +19,6 @@
     <string name="percent">%</string>
     <string name="clear">AC</string>
 
-    <string name="msg_overflow_error">計算結果がオーバーフローしました。\nAC ボタンをタップしてください。</string>
-    <string name="msg_zero_divide_error">ゼロ除算につき計算不能です。\nAC ボタンをタップしてください。</string>
+    <string name="msg_overflow_error">計算結果がオーバーフローしました。\n計算結果には 0 を表示していますが、AC ボタンをタップしてクリアしてください。</string>
+    <string name="msg_zero_divide_error">ゼロ除算につき計算不能です。\n計算結果には 0 を表示していますが、AC ボタンをタップしてクリアしてください。</string>
 </resources>
