@@ -2,7 +2,6 @@ package com.example.calculatorlikeios
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
@@ -15,15 +14,15 @@ class MainActivity : AppCompatActivity() {
 
     // Toast エラー表示
     val overFlowError     : String    = "OVER_FLOW_ERROR"
-    val zeroDevideError   : String    = "ZERO_DEVIDED_ERROR"
+    val zeroDevideError   : String    = "ZERO_DIVIDE_ERROR"
 
     // 演算処理判定
     private lateinit var calculateMethod  : String
     private val initFunction              : String    = "INIT"
     private val plusFunction              : String    = "PLUSFUNCTION"
-    private val divisionFunction          : String    = "DIVISIONFUNCTION"
     private val subtractionFunction       : String    = "SUBTRACTIONFUNCTION"
     private val multipleFunction          : String    = "MULTIPLEFUNCTION"
+    private val divisionFunction          : String    = "DIVISIONFUNCTION"
 
     // 結果表示用UI
     private lateinit var display    : TextView
@@ -120,7 +119,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun calcPercent() {
         var display_text = display.text
-        Log.d("dispNum", "dispNum :" + display_text)
         var changeSymbolNum: Int
         if (display_text.toString() != "") {
             changeSymbolNum = display_text.toString().toInt() / 100
@@ -135,7 +133,6 @@ class MainActivity : AppCompatActivity() {
     private fun equalFunction() {
         var result: Int = 0
         var devideByZero: Boolean = false
-        Log.d("calNum", "firstNum :" + displayNumber + ", secondNum:" + displaySecondNumber)
         when (calculateMethod) {
             plusFunction -> {
                 result = displayNumber + displaySecondNumber
@@ -179,11 +176,11 @@ class MainActivity : AppCompatActivity() {
     private fun showErrorToast(errorMsg: String) {
         when (errorMsg) {
             overFlowError -> {
-                val toast = Toast.makeText(this, "計算結果がオーバーフローしました。", Toast.LENGTH_LONG)
+                val toast = Toast.makeText(this, getString(R.string.msg_overflow_error), Toast.LENGTH_LONG)
                 toast.show()
             }
             zeroDevideError -> {
-                val toast = Toast.makeText(this, "ゼロ除算につき計算不能です。", Toast.LENGTH_LONG)
+                val toast = Toast.makeText(this, getString(R.string.msg_zero_divide_error), Toast.LENGTH_LONG)
                 toast.show()
             }
         }
